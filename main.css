@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+}
+
+input {
+    width: 40px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+button {
+    width: 70%;
+    color: #000000;
+    background-color: #b0b0b0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 25px;
+}
+
+button:hover {
+    box-shadow: 0 0 20px 5px #d0d0d0 inset;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:active {
+    background-color: #4e5d6c;
+    color: #ffffff;
+    box-shadow: none;
+    outline: 0;
+}
+
+.space {
+    background: url("sk.jpg");
+    height: 100vh;
+}
+
+.rad {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #0a9708;
+    transition: 0.4s all linear;
+    outline: none;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+
+.rad:checked {
+    border: 5px solid #0a9708;
+    background-color: #000000;
+}
+
+.settingsBTN {
+    text-align: center;
+}
+
+.settings {
+    display: none;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    color: aliceblue;
+}
+.mainInp {
+    text-align: center;
+
+}
+
+.inpNumb, .inpColor {
+    text-align: center;
+}
+
+.inp {
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+    background-color: #b0b0b0;
+    display: inline-block;
+}
+
+.inp input {
+    float: right;
+}
+
+/*creator Sklavo Georg*/

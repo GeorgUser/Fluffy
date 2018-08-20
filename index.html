@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<section class="space" id="space">
+    <canvas id="c1"></canvas>
+    <div class="settingsBTN">
+        <button class="btn" id="btn">Settings</button>
+    </div>
+    <div class="settings" id="settings">
+        <div class="main">
+            <p class="mainInp"><label for="area1">All Window:</label><input class="rad" type="radio" checked name="area" id="area1" value="Window"></p> <p>or</p>
+            <p class="mainInp"><label for="area2">Around the mouse:</label><input type="radio"class="rad"  name="area" id="area2" value="mouse">
+                <br> Area in PX:<input type="number" id="areaMouse" value="50"></p>
+        </div>
+
+        <div class="inpNumb">
+            <p class="inp">
+                Number Dots:
+                <input type="number" id="numberDot" value="500">
+            </p>
+            <p class="inp">
+                Speed:
+                <input type="number" id="speed" value="40">
+            </p>
+            <p class="inp">
+                Numer Step:
+                <input type="number" id="numbStep" value="15">
+            </p>
+            <p class="inp">
+                Long Step:
+                <input type="number" id="longStep" value="3">
+            </p>
+        </div>
+        <div class="inpColor">
+            <p class="inp">
+                Color Line:
+                <input type="color" id="color" value="#F8FF03">
+            </p>
+            <p class="inp">
+                Color BG:
+                <input type="color" id="bg" value="#ffffff">
+            </p>
+            <p class="inp">
+                Color Dots:
+                <input type="color" id="colorDot" value="#ffffff">
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+<script src="main.js"></script>
+</body>
+</html>
