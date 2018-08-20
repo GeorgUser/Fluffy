@@ -4,14 +4,6 @@ window.onload = function () {
     var canvasW = document.documentElement.clientWidth;
     var canvasH = window.innerHeight;
 
-    var x = [];
-    var y = [];
-    var stepCount = [];
-    var direction = [];
-    var myX;
-    var myY;
-
-
     var inputDot = document.getElementById('numberDot');
     var inputColorLine = document.getElementById('color');
     var inputSpeed = document.getElementById('speed');
@@ -21,6 +13,12 @@ window.onload = function () {
     var inputSpeedDot = document.getElementById('longStep');
     var inputArea = document.getElementsByName('area');
     var inputAreaMouse = document.getElementById('areaMouse');
+
+    var x = [];
+    var y = [];
+    var stepCount = [];
+    var direction = [];
+
     var speed = inputSpeed.value;
     var numbStep = inputNumbStep.value;
     var numberDot = inputDot.value;
@@ -53,7 +51,6 @@ window.onload = function () {
         }
     }
 
-
     function resizeCanvas() {
         canvasW = document.documentElement.clientWidth;
         canvasH = window.innerHeight - 52;
@@ -63,30 +60,39 @@ window.onload = function () {
 
 
 
+
     inputAreaMouse.oninput = function () {
         areaMouse = this.value;
         if(this.value<= 30){
             areaMouse = 30;
         }
     }
+
+
     inputColorLine.oninput = function () {
         colorLine = this.value;
     }
+
     inputBG.oninput = function () {
-        bg = canvas.style.backgroundColor = t
+        bg = canvas.style.backgroundColor = this.value;
     }
+
     inputSpeed.oninput = function () {
         speed = this.value;
     }
+
     inputColorDot.oninput = function () {
         colorDot = this.value;
     }
+
     inputNumbStep.oninput = function () {
         numbStep = this.value;
     }
+
     inputSpeedDot.oninput = function () {
         speedDot = this.value;
     }
+
     inputDot.oninput = function () {
         numberDot = inputDot.value;
         for(var i=0; i<numberDot; i++){
@@ -96,7 +102,6 @@ window.onload = function () {
             direction[i]= 0;
         }
     }
-
 
     for(var s=0; s<numberDot; s++){
         x[s]= canvasW/2;
@@ -198,6 +203,8 @@ window.onload = function () {
         myX = event.offsetX;
         myY = event.offsetY;
     }
+
+
     window.onresize = resizeCanvas;
     resizeCanvas();
     drawDot();
