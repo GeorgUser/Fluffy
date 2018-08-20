@@ -10,6 +10,60 @@ window.onload = function () {
     var myY;
 
 
+    var inputDot = document.getElementById('numberDot');
+    var inputColorLine = document.getElementById('color');
+    var inputSpeed = document.getElementById('speed');
+    var inputBG = document.getElementById('bg');
+    var inputColorDot = document.getElementById('colorDot');
+    var inputNumbStep = document.getElementById('numbStep');
+    var inputSpeedDot = document.getElementById('longStep');
+    var inputArea = document.getElementsByName('area');
+    var inputAreaMouse = document.getElementById('areaMouse');
+    var speed = inputSpeed.value;
+    var numbStep = inputNumbStep.value;
+    var numberDot = inputDot.value;
+    var speedDot = inputSpeedDot.value;
+    var colorLine = inputColorLine.value;
+    var colorDot = inputColorDot.value;
+    var areaMouse = inputAreaMouse.value;
+    var scrollStart = 0;
+    var myX;
+    var myY;
+    var bg;
+    inputAreaMouse.oninput = function () {
+        areaMouse = this.value;
+        if(this.value<= 30){
+            areaMouse = 30;
+        }
+    }
+    inputColorLine.oninput = function () {
+        colorLine = this.value;
+    }
+    inputBG.oninput = function () {
+        bg = canvas.style.backgroundColor = t
+    }
+    inputSpeed.oninput = function () {
+        speed = this.value;
+    }
+    inputColorDot.oninput = function () {
+        colorDot = this.value;
+    }
+    inputNumbStep.oninput = function () {
+        numbStep = this.value;
+    }
+    inputSpeedDot.oninput = function () {
+        speedDot = this.value;
+    }
+    inputDot.oninput = function () {
+        numberDot = inputDot.value;
+        for(var i=0; i<numberDot; i++){
+            x[i]= canvasW/2;
+            y[i]= canvasH/2;
+            stepCount[i]= 0;
+            direction[i]= 0;
+        }
+    }
+
 
     for(var s=0; s<numberDot; s++){
         x[s]= canvasW/2;
