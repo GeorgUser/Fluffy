@@ -1,6 +1,8 @@
 window.onload = function () {
     var canvas = document.getElementById('c1');
     var ctx = canvas.getContext('2d');
+    var canvasW = document.documentElement.clientWidth;
+    var canvasH = window.innerHeight;
 
     var x = [];
     var y = [];
@@ -52,7 +54,12 @@ window.onload = function () {
     }
 
 
-
+    function resizeCanvas() {
+        canvasW = document.documentElement.clientWidth;
+        canvasH = window.innerHeight - 52;
+        canvas.width = canvasW;
+        canvas.height = canvasH;
+    }
 
 
 
@@ -191,5 +198,7 @@ window.onload = function () {
         myX = event.offsetX;
         myY = event.offsetY;
     }
+    window.onresize = resizeCanvas;
+    resizeCanvas();
     drawDot();
 }
