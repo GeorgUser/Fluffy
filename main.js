@@ -30,6 +30,32 @@ window.onload = function () {
     var myX;
     var myY;
     var bg;
+
+    document.getElementById('btn').onclick = function () {
+        document.getElementById('settings').style.display = 'block';
+        document.getElementById('space').style.height = '100%';
+        setInterval(scroll, 20);
+        resizeCanvas();
+    }
+
+    function scroll() {
+        var windowH = document.documentElement.clientHeight;
+        var documentH = document.documentElement.scrollHeight;
+        var scrollEnd =  documentH - windowH;
+
+        if(scrollStart < scrollEnd){
+            document.documentElement.scrollTop = scrollStart;
+            scrollStart += 5;
+        } else {
+            return;
+        }
+    }
+
+
+
+
+
+
     inputAreaMouse.oninput = function () {
         areaMouse = this.value;
         if(this.value<= 30){
