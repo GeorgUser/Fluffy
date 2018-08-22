@@ -82,11 +82,15 @@ button:active {
 }
 .mainInp {
     text-align: center;
-
 }
 
-.inpNumb, .inpColor {
+.inpNumb, .inpColor, .installBTN {
     text-align: center;
+}
+
+.installBTN {
+    margin: 20px auto;
+    width: 50%;
 }
 
 .inp {
